@@ -8,6 +8,8 @@ import AddProduct from './components/AddProduct/AddProduct';
 import EditProduct from './components/EditProduct/EditProduct';
 
 import './App.css';
+import Register from './components/Register/Register';
+import Login from './components/Login/Login';
 
 
 function App() {
@@ -27,11 +29,13 @@ function App() {
     <Header />
 
       <Routes>
-         <Route path="/" element={<ProductList/>}>
-         </Route>
-         <Route path='about' element = {<AddProduct/>}></Route>
-         <Route path='add' element = {<AddProduct/>}></Route>
-         <Route path='/edit/:id' element = {<EditProduct/>}></Route>
+         <Route path="/" element={<ProductList/>}> </Route>
+         <Route path='about' element = {<AddProduct/>}> </Route>
+         <Route path='add' element = {<AddProduct/>}> </Route>
+         <Route path='/edit/:id' element = {<EditProduct/>}> </Route>
+         <Route path="register" element = {<Register/>}> </Route> 
+         <Route path="login" element = {<Login/>}> </Route>  
+            
       </Routes>
 
       

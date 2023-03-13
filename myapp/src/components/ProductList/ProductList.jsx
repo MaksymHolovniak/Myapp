@@ -11,13 +11,13 @@ const ProductList = () => {
    }, []);
 
       const fetchData = async() => {
-         const response = await fetch('http://localhost:8080/products');
+         const response = await fetch('http://localhost:5000/products');
          const data = await response.json();
          setProducts(data);
       }
 
       const deleteProduct = async(id) => {
-         await fetch('http://localhost:8080/products/${id}', {
+         await fetch('http://localhost:5000/products/${id}', {
          method: "DELTE",
          headers: {
             'Content-Type':' application/json'
@@ -45,7 +45,7 @@ const ProductList = () => {
                             <td>{ product.title }</td>
                             <td>{ product.price }</td>
                             <td>
-                                <Link to={`/edit/${product.id}`} className="button is-small is-info">Edit</Link>
+                                <Link to="/edit/${product.id}" className="button is-small is-info">Edit</Link>
                                 <button onClick={() => deleteProduct(product.id)} className="button is-small is-danger">Delete</button>
                             </td>
                         </tr>
